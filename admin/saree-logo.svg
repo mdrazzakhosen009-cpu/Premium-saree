@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#d8b46a"/><stop offset=".5" stop-color="#fff0b5"/><stop offset="1" stop-color="#b88735"/></linearGradient></defs>
+<rect width="500" height="160" rx="28" fill="#090909"/><circle cx="78" cy="80" r="48" fill="none" stroke="url(#g)" stroke-width="3"/>
+<path d="M52 95c12-34 37-49 52-21M55 111c20-3 39-13 51-31" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round"/>
+<text x="140" y="84" fill="url(#g)" font-family="Georgia,serif" font-size="54" font-weight="700" letter-spacing="7">SAREE</text>
+<text x="144" y="112" fill="#eee" font-family="Arial,sans-serif" font-size="13" letter-spacing="5">PREMIUM COLLECTION</text></svg>
