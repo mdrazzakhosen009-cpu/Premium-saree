@@ -6,7 +6,11 @@
 <script>
 const api=async(u,o)=>{let r=await fetch(u,o),d=await r.json();if(!r.ok)throw Error(d.error||"Error");return d}
 async function check(){try{await api("/api/admin/me");loginOK()}catch{}}
-function loginOK(){login.classList.add("hidden");app.classList.remove("hidden");page("dashboard")}
+function loginOK(){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
+  page("dashboard");
+}
 async function login(){try{await api("/api/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({password:lp.value})});loginOK()}catch(e){le.textContent=e.message}}
 async function logout(){await api("/api/admin/logout",{method:"POST"});location.reload()}
 function page(p){document.querySelectorAll(".side button").forEach(b=>b.classList.remove("active"));[...document.querySelectorAll(".side button")].find(b=>b.textContent.toLowerCase().includes(p==="settings"?"store":p==="password"?"change":p))?.classList.add("active");title.textContent=p[0].toUpperCase()+p.slice(1);({dashboard:dash,products:productsPage,orders:ordersPage,agents:agentsPage,settings:settingsPage,password:passwordPage}[p])()}
